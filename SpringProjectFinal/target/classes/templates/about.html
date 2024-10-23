@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f4f7f6;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+        .header {
+            background: #28a745;
+            color: #fff;
+            padding: 60px 0;
+        }
+        .header h2 {
+            font-size: 2.5rem;
+        }
+        .content-section {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+        }
+        .footer {
+            background: #28a745;
+            color: #fff;
+            padding: 20px 0;
+        }
+        .footer p {
+            margin: 0;
+            text-align: center;
+        }
+        h3 {
+            color: #28a745;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        ul li i {
+            color: #28a745;
+        }
+        .btn-primary {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+    </style>
+    <title>About Us - Sathya IT Solutions</title>
+</head>
+<body>
+
+<!-- Header Section -->
+<div class="header text-center">
+    <h2>About Sathya IT Solutions</h2>
+    <p class="lead">Empowering Businesses Through Software Training and IT Solutions</p>
+</div>
+
+<!-- Content Section -->
+<div class="container mt-5 content-section" th:fragment="content">
+    <p>Welcome to <strong>Sathya IT Solutions</strong>, your premier destination for cutting-edge software training and IT services. We are committed to delivering excellence in education and ensuring the satisfaction of our valued clients.</p>
+
+    <p>We specialize in offering comprehensive software courses designed to cater to the needs of both beginners and experienced professionals. Our mission is to empower individuals and businesses with the skills necessary to succeed in the ever-evolving world of technology.</p>
+
+    <h3>Why Choose Sathya IT Solutions?</h3>
+    <ul class="list-unstyled">
+        <li><i class="fas fa-check-circle"></i> <strong>Industry Expertise:</strong> Learn from experts with real-world experience.</li>
+        <li><i class="fas fa-check-circle"></i> <strong>State-of-the-Art Facilities:</strong> Access to the latest software tools and technologies.</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Hands-On Learning:</strong> Practical, project-based training to ensure job readiness.</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Career Focus:</strong> Programs designed to help you succeed in today’s competitive job market.</li>
+    </ul>
+
+    <p>At Sathya IT Solutions, we take pride in being the best software training institute in Hyderabad. Our team of dedicated professionals is here to provide you with hands-on learning, personal guidance, and the expertise needed to excel in the IT industry.</p>
+
+    <p class="mb-0">We look forward to working with you and helping you achieve your professional goals. <strong>Join us</strong> for an unmatched learning experience!</p>
+</div>
+
+<!-- Footer Section -->
+<div class="footer mt-5">
+    <div class="container">
+        <p>© 2024 Sathya IT Solutions | All Rights Reserved</p>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

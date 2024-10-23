@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Product List</title>
+</head>
+<body>
+
+<div class="container mt-5" th:fragment="content">
+	
+    <h2>Product List</h2>
+     <form th:action="@{/searchProduct}" method="get" class="form-inline mb-4">
+        <input type="text" class="form-control mr-2" name="proId" placeholder="Enter Product ID" required>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Product ID</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Description</th>
+                <th scope="col">Category</th>
+                <th scope="col">Created At</th>
+                <th scope="col">Created By</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="product : ${products}">
+                <td th:text="${product.proId}"></td>
+                <td th:text="${product.proName}"></td>
+                <td th:text="${product.proPrice}"></td>
+                <td th:text="${product.proBrand}"></td>
+                <td th:text="${product.proDescription}"></td>
+                <td th:text="${product.proCategory}"></td>
+                <td th:text="${product.createdAt}"></td>
+                <td th:text="${product.createdBy}"></td>
+                <td>
+   <form th:action="@{/delete/{id}(id=${product.proId})}" method="get" onsubmit="return confirm('Are you sure you want to delete this product?');">
+    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+	</form>
+	
+	 <form th:action="@{/edit/{id}(id=${product.proId})}" method="get">
+        <button type="submit" class="btn btn-warning btn-sm">Edit</button>
+    </form>
+</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
